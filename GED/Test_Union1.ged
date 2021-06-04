@@ -1,0 +1,70 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG Russian
+
+0 @I1@ INDI
+1 NAME Юлия //
+2 GIVN Юлия
+2 SURN Симаненко
+1 SEX F
+1 BIRT
+2 DATE 28 JUL 1999
+1 FAMC @F1@
+
+0 @I2@ INDI
+1 NAME Ирина //
+2 GIVN Ирина
+2 SURN Литвиненко
+1 SEX F
+1 BIRT
+1 FAMS @F1@
+1 FAMC @F2@
+
+0 @I3@ INDI
+1 NAME Василий //
+2 GIVN Василий
+2 SURN Литвиненко
+1 SEX M
+1 BIRT
+1 FAMS @F2@
+
+0 @I4@ INDI
+1 NAME Людмила //
+2 GIVN Людмила
+2 SURN Литвиненко
+1 SEX F
+1 BIRT
+1 FAMS @F2@
+
+0 @I9@ INDI
+1 NAME Денис //
+2 GIVN Денис
+2 SURN Литвиненко
+1 SEX M
+1 BIRT
+1 FAMC @F2@
+
+0 @I5@ INDI
+1 NAME Алекс //
+2 GIVN Алекс
+2 SURN Симаненко
+1 SEX M
+1 FAMS @F1@
+
+0 @F1@ FAM
+1 HUSB @I5@
+1 WIFE @I2@
+1 CHIL @I1@
+1 MARR
+
+0 @F2@ FAM
+1 HUSB @I3@
+1 WIFE @I4@
+1 CHIL @I2@
+1 CHIL @I9@
+1 MARR
+
+0 TRLR

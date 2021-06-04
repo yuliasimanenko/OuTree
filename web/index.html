@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OuTree</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon2.png">
+    <script src="eel.js"></script>
+    <script type='text/javascript'>
+        let trees = []
+        let tree_number = 0
+        function getPathToFile() {
+            if (tree_number < 2) {
+                eel.pythonFunction()(path => check_path(path));
+                tree_number ++;
+            }
+            else
+                document.getElementById("out-text").innerText = "Push the \"Union\"";
+        }
+
+        function check_path(path) {
+            if (!!path) {
+                trees.push(path)
+                document.getElementById("out-text").innerText = `Tree ${tree_number} was Download`;
+            }
+            else {
+                const modal = document.querySelector('dialog');
+                document.getElementById("dialog-text").innerText = "Incorrect file Type"
+                modal.showModal();
+                trees =[]
+                document.getElementById("out-text").innerText = "";
+                tree_number = 0
+            }
+
+        }
+
+        function unionTree() {
+            eel.union_tree(trees[0], trees[1])( result => {
+                if (result){
+                    const modal = document.querySelector('dialog');
+                    document.getElementById("dialog-text").innerText = `Unable to merge trees \n Comparability is ${result}%`
+                    modal.showModal();
+                    trees =[]
+                    document.getElementById("out-text").innerText = "";
+                    tree_number = 0
+                }
+                else
+                    document.getElementById("out-text").innerText = "Union was Complete";
+            });
+        }
+
+    </script>
+</head>
+<body>
+
+        <img id='logo' src="Logo.png" alt="">
+
+
+    <div class="multi-button">
+          <button class="copy" onclick="getPathToFile()">Upload</button>
+          <button class="paste" onclick="unionTree()">Union</button>
+    </div>
+
+    <div class="info-text" id="out-text">
+    </div>
+
+    <dialog>
+        <div id="dialog-text"></div>
+       <button class="multi-button" id="dialog-btn" onclick="document.querySelector('dialog').close()">OK</button></p>
+    </dialog>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG Russian
+1 SOUR MYHERITAGE
+2 NAME MyHeritage Family Tree Builder
+2 VERS 8.0.0.8569
+2 _RTLSAVE RTL
+2 CORP MyHeritage.com
+1 SUBM @U1@
+1 DEST MYHERITAGE
+1 DATE 1 MAY 2021
+2 TIME 18:20:36 
+
+0 @U1@ SUBM
+
+0 @I1@ INDI
+1 NAME Юлия //
+2 GIVN Юлия
+2 SURN Симаненко
+1 SEX F
+1 BIRT
+2 DATE 28 JUL 1999
+1 FAMC @F1@
+
+0 @I2@ INDI
+1 NAME Ирина //
+2 GIVN Ирина
+2 SURN Литвиненко
+1 SEX F
+1 BIRT
+1 FAMS @F1@
+
+0 @I5@ INDI
+1 NAME Алекс //
+2 GIVN Алекс
+2 SURN Симаненко
+1 SEX M
+1 BIRT
+1 FAMS @F1@
+1 FAMC @F3@
+
+0 @I6@ INDI
+1 NAME Любовь //
+2 GIVN Любовь
+2 SURN Симаненко
+1 SEX F
+1 BIRT
+1 FAMS @F3@
+
+0 @I7@ INDI
+1 NAME Виталий //
+2 GIVN Виталий
+2 SURN Симаненко
+1 SEX M
+1 BIRT
+1 FAMS @F3@
+
+0 @F1@ FAM
+1 HUSB @I5@
+1 WIFE @I2@
+1 CHIL @I1@
+1 MARR
+
+0 @F3@ FAM
+1 HUSB @I7@
+1 WIFE @I6@
+1 CHIL @I5@
+1 MARR
+
+0 TRLR

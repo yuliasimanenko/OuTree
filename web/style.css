@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+
+
+body{
+/*background: rgb(199, 197, 182);*/
+/*background: linear-gradient(90deg, black 5%, rgba(125,151,159,1) 100%);*/
+    background: #422920;
+/*    background: black;*/
+    text-align: center;
+
+}
+
+
+.multi-button {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.multi-button button {
+  background: #C7C5B6;
+  border: 0.125em solid #c7c5b6;
+  cursor: pointer;
+  font: 600 1.5rem/1.25 "Montserrat", sans-serif;
+  letter-spacing: 0.125em;
+  margin-inline: 4rem;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-transform: uppercase;
+}
+.multi-button button:before, .multi-button button:after {
+  content: "";
+  position: absolute;
+  transition: all 0.125s ease-in-out;
+}
+
+.multi-button button.copy:after {
+  border: 0.125em dashed #7D979F;
+  /*background: #7D979F;*/
+  bottom: -0.125em;
+  left: -0.125em;
+  right: -0.125em;
+  top: -0.125em;
+  z-index: -1;
+}
+.multi-button button.copy:hover:after, .multi-button button.copy:focus:after {
+  bottom: -0.375em;
+  left: 0.125em;
+  right: -0.375em;
+  top: 0.125em;
+}
+
+
+.multi-button button.paste:after {
+  border: 0.125em dashed black;
+  bottom: -0.125em;
+  left: -0.125em;
+  right: -0.125em;
+  top: -0.125em;
+}
+.multi-button button.paste:hover:after, .multi-button button.paste:focus:after {
+  bottom: 0.125em;
+  left: 0.125em;
+  right: 0.125em;
+  top: 0.125em;
+}
+
+
+
+
+
+
+.multi-button input.copy:after {
+  border: 0.125em dashed #7D979F;
+  /*background: #7D979F;*/
+  bottom: -0.125em;
+  left: -0.125em;
+  right: -0.125em;
+  top: -0.125em;
+  z-index: -1;
+}
+.multi-button input.copy:hover:after, .multi-button input.copy:focus:after {
+  bottom: -0.375em;
+  left: 0.125em;
+  right: -0.375em;
+  top: 0.125em;
+}
+
+
+
+.info-text{
+    width: 70%;
+    height: 100px;
+    font: 600 1.5rem/1.25 "Montserrat", sans-serif;
+    letter-spacing: 0.125em;
+    margin-inside: 5%;
+    margin: 2%;
+    color: #C7C5B6;
+}
+
+dialog{
+    width: 50%;
+    height: 30%;
+    background: #C7C5B6;
+    font: 600 1.5rem/1.25 "Montserrat", sans-serif;
+    letter-spacing: 0.125em;
+}
+
+dialog::backdrop {
+  /* сделает фон черным полупрозрачным */
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#dialog-btn{
+    background: #C7C5B6;
+  border: 0.125em solid black;
+  cursor: pointer;
+  font: 600 1.5rem/1.25 "Montserrat", sans-serif;
+  letter-spacing: 0.125em;
+  margin-inline: 4rem;
+    margin-top: 2rem;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-transform: uppercase;
+}
